@@ -1,8 +1,7 @@
 function iterator() {
   let step = 0;
-
   return {
-    next: function() {
+    next: () => {
       step++;
 
       if (step === 1) {
@@ -22,31 +21,14 @@ function iterator() {
   };
 }
 
-const iterable = {};
-iterable[Symbol.iterator] = iterator;
+const irritable = {};
+irritable[Symbol.iterator] = iterator;
+// console.log(...irritable);
 
-// for (let x of iterable) {
-//   console.log(x);
+// for (let x of irritable) {
+//   console.log(x)
 // }
 
-// let result = Array.from(iterable);
-// console.log(result);
-
-// console.log(...iterable);
+const [first, ...othervalue] =
 
 
-// Destructuring
-// const [first, undefined, third] = iterable;
-// console.log(first, third);
-
-// yield*
-// function* gen() {
-//   yield* iterable;
-// }
-
-// const generator = gen();
-// const first = generator.next().value;
-// console.log(first);
-// console.log([...generator]);
-
-// The previous function can be simplified if the iterable and the iterator are the same object:

@@ -1,26 +1,46 @@
-function wait(ms) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(), ms);
-  });
-}
+const emoji = require('./emoji');
+const { wait, random } = require('./helpers')
 
-const emoji = {
-  'crystal-ball': '🔮',
-  dancing: '💃',
-  gemstone: '💎',
-  joy: '😂',
-  lemon: '🍋',
-  lollipop: '🍭',
-  sparkles: '✨',
-  watermelon: '🍉',
-};
-
-async function get(request) {
-  await wait(500);
+async function getEmoji(request) {
+  await wait(1000);
   return emoji[request];
 }
 
-async function* asyncGenerator() {
-  const request = await emoji();
-  yield 1;
+// Async Generator
+async function* asyncGen() {
+  yield getEmoji(yield);
 }
+
+const generator = asyncGen();
+generator.next();
+generator.next('dancer').then(({ value }) => console.log(value));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = getEmoji;
+

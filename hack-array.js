@@ -1,8 +1,7 @@
 function iterator() {
   let step = 0;
-
   return {
-    next: function() {
+    next: () => {
       step++;
 
       if (step === 1) {
@@ -23,6 +22,3 @@ function iterator() {
 }
 
 Array.prototype[Symbol.iterator] = iterator;
-
-let a = [1, 2, 3];
-console.log(...a);
