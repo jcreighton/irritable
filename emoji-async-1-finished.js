@@ -14,33 +14,3 @@ async function* asyncGen() {
 const generator = asyncGen();
 generator.next();
 generator.next('dancer').then(({ value }) => console.log(value));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports = getEmoji;
-

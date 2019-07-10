@@ -1,3 +1,5 @@
+// Copy & paste into browser console
+
 function iterator() {
   let step = 0;
   return {

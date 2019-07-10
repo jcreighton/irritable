@@ -1,6 +1,6 @@
 const emoji = require('./emoji');
-const { wait, random } = require('./helpers')
-const getEmoji = require('./emoji-async');
+const { random } = require('./helpers')
+const getEmoji = require('./emoji-async-1');
 
 // Emoji feed that sends a random emoji every 1 seconds
 async function* randomEmojiStream() {

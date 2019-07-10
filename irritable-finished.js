@@ -24,15 +24,11 @@ function iterator() {
 const irritable = {};
 irritable[Symbol.iterator] = iterator;
 
-
-// console.log(...irritable);
+console.log(...irritable);
 
 // for (let x of irritable) {
 //   console.log(x)
 // }
 
-// Destructure
-const [angry] = irritable;
-console.log(angry);
-
-
+// const [angry] = irritable;
+// console.log(angry);
