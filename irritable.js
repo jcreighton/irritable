@@ -29,6 +29,5 @@ irritable[Symbol.iterator] = iterator;
 //   console.log(x)
 // }
 
-const [first, ...othervalue] =
 
 
